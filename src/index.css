@@ -1,3 +1,13 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,body{
+  min-height: 100%;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -5,9 +15,79 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  /* background: radial-gradient(at top left, rgb(225, 64, 43) 0%, rgb(96, 9, 107) 100%);
+  background-repeat: no-repeat; */
+  background: url('https://cdn.dribbble.com/users/470545/screenshots/3249842/sunset-on-a-beach.gif');
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+  background-position: center !important;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.content{
+  max-width: 1330px;
+  padding: 0px 15px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.overlay{
+  width: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ytdl-title{
+  font-size: 50px;
+  color:#fff;
+  margin-bottom: 10px;
+}
+
+.ytdl-description{
+  font-size: 23px;
+  color:#fff;
+  margin-bottom: 25px;
+}
+
+.ytdl-input{
+  width: 600px;
+  font-size: 23px;
+  padding: 10px 20px;
+}
+
+.controls{
+  display: flex;
+  align-items: center;
+  margin-top: 25px;
+  max-width: 900px;
+  flex-wrap: wrap;
+}
+
+.ytdl-btn{
+  background: transparent;
+  border: 1px solid #fff;
+  outline: none;
+  color: #fff;
+  padding: 15px 20px;
+  font-size: 21px;
+  flex: 0 1 32%;
+  margin: 5px;
+  cursor: pointer;
+  transition: all .2s linear;
+}
+
+.ytdl-btn:hover{
+  color: #202020;
+  background: #fff;
+}
+
+.f-100{
+  flex: 0 1 100%;
 }

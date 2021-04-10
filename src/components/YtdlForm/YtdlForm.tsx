@@ -30,7 +30,7 @@ const YtdlForm = () => {
 
     const inputHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
         setYtLink(e.target.value)
-    } 
+    }
 
     const buttons: downloadButton[] = [
         { text: 'Скачать', fetchUrl: 'download' },
@@ -40,11 +40,13 @@ const YtdlForm = () => {
 
     return (
         <>
-            <input value={ytLink} type='text' onChange={inputHandler} />
-            {buttons.map((item, i) => {
-                return <button key={`${item}_${i}`} type="submit" onClick={() => download(item.fetchUrl)}>{item.text}</button>
-            })}
-            <button type="submit" onClick={downloadSplitedVideo}>Скачать поделённое видео</button>
+            <input value={ytLink} type='text' className='ytdl-input' placeholder='Вставьте ссылку на видео здесь...' onChange={inputHandler} />
+            <div className="controls">
+                {buttons.map((item, i) => {
+                    return <button key={`${item}_${i}`} type="submit" className='ytdl-btn' onClick={() => download(item.fetchUrl)}>{item.text}</button>
+                })}
+                <button type="submit" className='ytdl-btn f-100' onClick={downloadSplitedVideo}>Скачать отдельно видео и аудио</button>
+            </div>
         </>
     );
 }

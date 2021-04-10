@@ -17,7 +17,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   /* background: radial-gradient(at top left, rgb(225, 64, 43) 0%, rgb(96, 9, 107) 100%);
   background-repeat: no-repeat; */
-  background: url('https://cdn.dribbble.com/users/470545/screenshots/3249842/sunset-on-a-beach.gif');
+  background: url('https://wallpapercave.com/wp/wp2864012.gif');
   background-repeat: no-repeat !important;
   background-size: cover !important;
   background-position: center !important;
@@ -38,10 +38,11 @@ code {
 .overlay{
   width: 100%;
   background: rgba(0, 0, 0, 0.4);
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 50px 0px;
 }
 
 .ytdl-title{
@@ -68,6 +69,7 @@ code {
   margin-top: 25px;
   max-width: 900px;
   flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .ytdl-btn{
@@ -78,9 +80,9 @@ code {
   padding: 15px 20px;
   font-size: 21px;
   flex: 0 1 32%;
-  margin: 5px;
   cursor: pointer;
   transition: all .2s linear;
+  margin-bottom: 15px;
 }
 
 .ytdl-btn:hover{
@@ -90,4 +92,33 @@ code {
 
 .f-100{
   flex: 0 1 100%;
+}
+
+@media screen and (max-width: 846px){
+  .ytdl-input{
+    width: 100%;
+    font-size: 19px;
+  }
+}
+
+@media screen and (max-width: 640px){
+  .ytdl-title{
+    font-size: 40px;
+    color:#fff;
+    margin-bottom: 10px;
+  }
+  
+  .ytdl-description{
+    font-size: 21px;
+  }
+  .ytdl-btn{
+    font-size: 21px;
+  }
+}
+
+@media screen and (max-width: 585px){
+  .ytdl-btn{
+    font-size: 20px;
+    flex: 0 1 100%;
+  }
 }

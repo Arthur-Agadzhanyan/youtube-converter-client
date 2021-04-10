@@ -40,7 +40,7 @@ const YtdlForm = () => {
 
     return (
         <>
-            <input value={ytLink} type='text' className='ytdl-input' placeholder='Вставьте ссылку на видео здесь...' onChange={inputHandler} />
+            <input value={ytLink} type='text' className='ytdl-input' placeholder='Вставьте ссылку на видео...' onChange={inputHandler} />
             <div className="controls">
                 {buttons.map((item, i) => {
                     return <button key={`${item}_${i}`} type="submit" className='ytdl-btn' onClick={() => download(item.fetchUrl)}>{item.text}</button>

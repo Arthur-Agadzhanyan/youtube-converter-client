@@ -3,6 +3,8 @@ import React, { SyntheticEvent, useState } from 'react';
 const YtdlForm = () => {
     const [ytLink, setYtLink] = useState<string>('');
 
+    const serverUrl = 'http://ytdl-srv.herokuapp.com/'
+
     interface downloadButton {
         text: string,
         fetchUrl: string
@@ -10,7 +12,7 @@ const YtdlForm = () => {
 
     const download = async (url: string) => {
         if (ytLink) {
-            window.location.href = `http://localhost:5000/${url}?url=${ytLink}`
+            window.location.href = `${serverUrl}${url}?url=${ytLink}`
             setYtLink('')
         }
     }
@@ -18,8 +20,8 @@ const YtdlForm = () => {
     const downloadSplitedVideo = async (e: SyntheticEvent) => {
         e.preventDefault()
         if (ytLink) {
-            const videoUrl = `http://localhost:5000/download-video?url=${ytLink}`
-            const audioUrl = `http://localhost:5000/download-audio?url=${ytLink}`
+            const videoUrl = `${serverUrl}download-video?url=${ytLink}`
+            const audioUrl = `${serverUrl}download-audio?url=${ytLink}`
 
             window.location.href = videoUrl
             setTimeout(() => window.location.href = audioUrl, 2000)

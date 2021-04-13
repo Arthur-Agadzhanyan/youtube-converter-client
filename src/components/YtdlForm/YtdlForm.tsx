@@ -3,7 +3,7 @@ import React, { SyntheticEvent, useState } from 'react';
 const YtdlForm = () => {
     const [ytLink, setYtLink] = useState<string>('');
 
-    const serverUrl = 'http://ytdl-srv.herokuapp.com/'
+    const serverUrl = 'https://ytdl-srv.herokuapp.com/'
 
     interface downloadButton {
         text: string,
